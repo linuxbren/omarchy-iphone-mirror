@@ -102,7 +102,7 @@ The installer refuses to replace a running application and does not enable or st
 
 XDG data and config overrides are supported. Spaces and single quotes in paths are tested. Paths containing backslashes, double quotes, dollar signs, backticks, percent signs, or line breaks are rejected before installation.
 
-Only the direct pymobiledevice3 requirement is pinned. Transitive dependencies are not yet fully locked.
+The direct pymobiledevice3 requirement is pinned, along with its `srptools` dependency after an unpinned `srptools` upgrade broke SRP proof verification during Wi-Fi pairing (`AssertionError` in `verify_proof`, from `srptools` 2.0.0's changed comparison behavior). Other transitive dependencies are not yet fully locked.
 
 ## Prepare the phone
 
